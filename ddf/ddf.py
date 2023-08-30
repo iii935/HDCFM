@@ -18,7 +18,7 @@ OP_DICT = {
 class DDFFunction(Function):
     @staticmethod
     def forward(ctx, features, channel_filter, spatial_filter,
-                kernel_size=3, dilation=1, stride=1, kernel_combine='mul', version='o'):
+                kernel_size=3, dilation=1, stride=1, kernel_combine='mul', version='f'):
         # check args
         assert features.is_cuda, 'input feature must be a CUDA tensor.'
         assert channel_filter.is_cuda, 'channel_filter must be a CUDA tensor.'
